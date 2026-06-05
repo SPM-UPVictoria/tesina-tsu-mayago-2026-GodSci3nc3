@@ -3,7 +3,7 @@
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[spanish,mexico]{babel}
+\usepackage[english]{babel}
 %\usepackage[letterpaper,margin=2.5cm]{geometry}
 \usepackage{setspace}
 \usepackage{titlesec}
@@ -24,8 +24,8 @@
 \usepackage[skip=12pt plus1pt]{parskip}
 \usepackage{pdfpages} % Incluir PDF en documento en LATEX
 \usepackage{verbatim} % comentarios
-\usepackage{algpseudocode}
-\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{algorithm}
 \usepackage{pdflscape}
 \usepackage{afterpage}
 \usepackage{array,booktabs,ragged2e}
@@ -41,32 +41,32 @@
 
 
 % Para utilizar el formato de citas IEEE y comentar los dos parrafos siguientes. Ademas de utilizar el comando \cite en vez de \cite
-\usepackage[backend=biber,sorting=none]{biblatex}
+%\usepackage[backend=biber,sorting=none]{biblatex}
 % Para utilizar el formato APA, sugiero comentar la linea anterior y descomentar las dos proximas lineas. Ademas de utilizar el comando \cite en vez de \cite
 %\usepackage[backend=biber,style=apa]{biblatex}
 %\DeclareLanguageMapping{english}{american-apa}
 
-\makeatletter
-\DefineBibliographyExtras{spanish}{%
-  \setcounter{smartand}{1}%
-  \let\lbx@finalnamedelim=\lbx@es@smartand
-  \let\lbx@finallistdelim=\lbx@es@smartand
-}
-\renewbibmacro*{name:delim:apa:family-given}[1]{%
-  \ifnumgreater{\value{listcount}}{\value{liststart}}
-    {\ifboolexpr{
-       test {\ifnumless{\value{listcount}}{\value{liststop}}}
-       or
-       test \ifmorenames
-     }
-       {\printdelim{multinamedelim}}
-       {\lbx@finalnamedelim{#1}}}
-    {}}
-\makeatother
+%\makeatletter
+%\DefineBibliographyExtras{spanish}{%
+%  \setcounter{smartand}{1}%
+%  \let\lbx@finalnamedelim=\lbx@es@smartand
+%  \let\lbx@finallistdelim=\lbx@es@smartand
+%}
+%\renewbibmacro*{name:delim:apa:family-given}[1]{%
+%  \ifnumgreater{\value{listcount}}{\value{liststart}}
+%    {\ifboolexpr{
+%       test {\ifnumless{\value{listcount}}{\value{liststop}}}
+%       or
+%       test \ifmorenames
+%     }
+%       {\printdelim{multinamedelim}}
+%       {\lbx@finalnamedelim{#1}}}
+%    {}}
+%\makeatother
 % Estas lineas permiten romper los hipervinculos muy largos en las referencias!!!!
-\setcounter{biburllcpenalty}{7000}
-\setcounter{biburlucpenalty}{8000}
-\addbibresource{Referencias.bib} % ARCHIVO DE BIBLIOGRAFÍA
+%\setcounter{biburllcpenalty}{7000}
+%\setcounter{biburlucpenalty}{8000}
+%\addbibresource{Referencias.bib} % ARCHIVO DE BIBLIOGRAFÍA
 
 
 \usepackage[bookmarks=true,breaklinks=true,bookmarksopen=false,colorlinks=true,linkcolor=blue]{hyperref}
@@ -78,36 +78,36 @@
 
 
 % CONSTANTES NECESARIAS PARA EL DOCUMENTO ---> MODIFIQUEN A SU CRITERIO
-\newcommand{\NombreAlumno}{Michael Jackson Perez Black}
+\newcommand{\NombreAlumno}{Arturo Rosales Velázquez}
 \soulregister{\NombreAlumno}{1}
 % NUNCA PONGAN EL TITULO EN MAYUSCULAS!!
-\newcommand{\NombreProyecto}{Notificación de actualizaciones de la información en un sistema de información web de pacientes hospitalizados a sus familiares del Sagrado Corazón de Jesus } 
+\newcommand{\NombreProyecto}{Semáforo de Insumos IMSS} 
 % Noten los \\ para insertar un ENTER del texto en el encabezado. NUNCA PONGAN EL TITULO EN MAYUSCULAS!!
-\newcommand{\NombreProyectoheader}{Notificación de actualizaciones de la información \\en un sistema de información web de pacientes\\ hospitalizados a sus familiares del Sagrado Corazón de Jesus}
-\newcommand{\NombreTSU}{Desarrollo de Software Multiplataforma}
-\newcommand{\UnidadEconomica}{Departamento de Psiquiatría Homeopática, Hospital San Jose Bonaventura}
-\newcommand{\nasesorempresaria}   {Dr. Shawn Murphy}
+\newcommand{\NombreProyectoheader}{Semáforo de Insumos IMSS}
+\newcommand{\NombreTSU}{Tecnologías de la Información e Innovación Digital}
+\newcommand{\UnidadEconomica}{Instituto Mexicano del Seguro Social (IMSS)}
+\newcommand{\nasesorempresaria}   {Lic. José Espronceda Galván}
 \newcommand{\nasesorinstitucional}{Dr. Said Polanco Martagón}
-\newcommand{\Matricula}           {1730505}  %SU MATRICULA
-\newcommand{\ncuatrimestre}{Mayo-Agosto 2026}
+\newcommand{\Matricula}           {Por definir}  %SU MATRICULA
+\newcommand{\ncuatrimestre}{Por definir}
 % ESTA ES LA FECHA EN LA QUE EL ASESOR INSTITUCIONA EVALUA EL INFORME
-\newcommand{\fechaAutorizacionInforme}               {31 de Julio de 2026} 
+\newcommand{\fechaAutorizacionInforme}               {Por definir} 
 % ESTA ES LA FECHA EN LA QUE EL ASESOR INSTITUCIONA PROGRAMA LA EXPOSCION 
-\newcommand{\DiaEvaluacionPesentacion}{12}
-\newcommand{\MesEvaluacionPesentacion}{Agosto}
-\newcommand{\AnhoEvaluacionPesentacion}{2026}
+\newcommand{\DiaEvaluacionPesentacion}{Por definir}
+\newcommand{\MesEvaluacionPesentacion}{Por definir}
+\newcommand{\AnhoEvaluacionPesentacion}{Por definir}
 \newcommand{\fechaPortada}               {\MesEvaluacionPesentacion~de~\AnhoEvaluacionPesentacion}
-\newcommand{\HoraEvaluacionPesentacion}{10:00 hrs}
+\newcommand{\HoraEvaluacionPesentacion}{Por definir}
 
-\newcommand{\modalidadEvaluacionPesentacion}{Presencial} % Otras opciones: Virtual
-\newcommand{\tipoAulaOficinaEnlacePesentacion}{la Oficina} % Otras opciones: la oficia/el aula/enlace
-\newcommand{\AulaEvaluacionOEnlaceMeetPesentacion}{I-XXX69} %otras opciones: si es un elance de meet, rodearlo \url{}
+\newcommand{\modalidadEvaluacionPesentacion}{Por definir} % Otras opciones: Virtual
+\newcommand{\tipoAulaOficinaEnlacePesentacion}{Por definir} % Otras opciones: la oficia/el aula/enlace
+\newcommand{\AulaEvaluacionOEnlaceMeetPesentacion}{Por definir} %otras opciones: si es un elance de meet, rodearlo \url{}
 
 %\newcommand{\modalidadEvaluacionPesentacion}{Virtual} % Otras opciones: Virtual
 %\newcommand{\tipoAulaOficinaEnlacePesentacion}{el enlace} % Otras opciones: la oficia/el aula/el enlace
 %\newcommand{\AulaEvaluacionOEnlaceMeetPesentacion}{\url{http://www.upvictoria.edu.mx}} %otras opciones: si es un elance de meet, rodearlo \url{}
 
-\newcommand{\ncarrera}            {Ingeniería en Tecnologías de la Información e Innovación Digital}
+\newcommand{\ncarrera}            {Tecnologías de la Información e Innovación Digital}
 
 
 \fancyhead{} % Clear all header fields
@@ -138,13 +138,8 @@
 
 %\usepackage[english]{babel}
 
-\addto\captionsspanish{% Replace "english" with the language you use
-  \renewcommand{\contentsname}%
-    {Contenido temático}%
-}
-
-
-\renewcommand\spanishtablename{Tabla}
+\renewcommand{\contentsname}{Contenido temático}
+\renewcommand{\tablename}{Tabla}
 
 \begin{document}
 
@@ -170,7 +165,7 @@
 
 {\Large \textbf{UNIVERSIDAD POLITÉCNICA DE VICTORIA}}\\[1.0cm]
 
-{\Large \textbf{REPORTE DE ACTIVIDADES DEL PROYECTO}}\\[0.75cm]
+{\Large \textbf{AVANCE DE TESINA DE ESTADÍA PROFESIONAL}}\\[0.75cm]
 
 {\Large \MakeUppercase{\NombreProyecto}}\\[1.0cm]
 
@@ -178,8 +173,8 @@ QUE PRESENTA
 
 \textbf{\MakeUppercase{\NombreAlumno}}\\[1.0cm]
 
-EN CUMPLIMIENTO DE LA ESTADÍA TSU EN\\
-\textbf{\MakeUppercase{\NombreTSU}}\\[0.75cm]
+EN CUMPLIMIENTO DE LA ESTADÍA PROFESIONAL EN\\
+\textbf{\MakeUppercase{\ncarrera}}\\[0.75cm]
 
 ASESOR INSTITUCIONAL\\
 \textbf{\MakeUppercase{\nasesorinstitucional}}\\[0.5cm]
@@ -210,8 +205,8 @@ Ciudad Victoria, Tamaulipas, \fechaPortada.
 
 
 \begin{center}
-{\Large \textbf{Formato de autorización para exposición de Estadía de}}\\[0.125cm]
-{\Large \textbf{Técnico Superior Universitario}}\\[0.25cm]
+{\Large \textbf{Formato de autorización para exposición de}}\\[0.125cm]
+{\Large \textbf{Estadía Profesional}}\\[0.25cm]
 \end{center}
 
 \noindent
@@ -246,7 +241,7 @@ Sin otro particular, se le recomienda estar disponible para iniciar su exposici�
 \vspace*{3cm}
 
 \begin{center}
-{\large \textbf{Control sumativo de Estadía para Técnico Superior Universitario}}
+{\large \textbf{Control sumativo de Estadía Profesional}}
 \end{center}
 
 \vspace{0.5cm}
@@ -308,15 +303,7 @@ Calificación final & \multicolumn{2}{c|}{ } \\ \hline
 %\vspace*{1cm}
 \section*{Resumen}
 
-El resumen es una representación condensada del contenido del documento. Su propósito es dar al lector un relato de las características principales del reporte. Su redacción es en tercera persona, en tiempo pasado, con escritura continua y sin tablas o imágenes. La extensión sugerida es no mayor a media página. Debe cumplir con las siguientes características:
-
-\begin{itemize}
-\item Se hace mención del nombre del proyecto como parte de la Estadía, el nombre de la unidad económica y su dirección completa.
-\item Se menciona el objetivo, meta, actividad o responsabilidad principal que se abordó.
-\item Se describe detalladamente la metodología desarrollada; tales como herramientas, materiales, equipos, cursos, softwares y conocimientos adquiridos en la universidad utilizados para alcanzar los objetivos empleados.
-\item Se describen detalladamente los resultados más importantes obtenidos.
-\item Se termina presentando conclusiones del trabajo.
-\end{itemize}
+El presente avance de tesina documenta el contexto, el problema y los objetivos del proyecto \textit{Semáforo de Insumos IMSS}, desarrollado durante la estadía profesional en el Instituto Mexicano del Seguro Social. Se describe la necesidad de contar con un control de insumos más preciso y oportuno, así como el enfoque propuesto para registrar datos en tiempo real y convertirlos en un esquema de semaforización que apoye la toma de decisiones. El documento delimita alcances y limitaciones, integra antecedentes institucionales y teóricos y presenta el temario tentativo del marco teórico, dejando explícito que la investigación se encuentra en fase de campo y desarrollo, sin resultados ni conclusiones todavía.
 
 
 \clearpage
@@ -324,7 +311,8 @@ El resumen es una representación condensada del contenido del documento. Su pro
 \addcontentsline{toc}{section}{Abstract}
 %\vspace*{1cm}
 \section*{Abstract}
-Add your abstract here...
+
+This first thesis progress report documents the context, problem statement, and objectives of the \textit{IMSS Supply Traffic Light} project, developed during the professional internship at the Mexican Social Security Institute. It outlines the need for timely and reliable supply control and the proposed approach to capture real-time data and translate it into a visual traffic-light system to support operational decisions. The report defines scope and limitations, reviews institutional and theoretical background, and presents the tentative outline for the theoretical framework. The work is currently in the field and development phase, with no results or conclusions yet.
 
 \clearpage
 %\renewcommand{\indexname}{Contenido temático}
@@ -345,13 +333,13 @@ Add your abstract here...
 
 %\chapter{Metodología}
 \clearpage
-\input{metodologia}
+%\input{metodologia}
 
 \clearpage
-\input{resultados}
+%\input{resultados}
 
 \clearpage
-\input{conclusiones}
+%\input{conclusiones}
 
 %\clearpage
 %\section*{Bibliografía}
@@ -360,8 +348,8 @@ Add your abstract here...
 
 \clearpage
 %\Urlmuskip=0mu plus 1mu\relax
-\addcontentsline{toc}{section}{Bibliografía} 
-\printbibliography
+%\addcontentsline{toc}{section}{Bibliografía} 
+%\printbibliography
  
 \clearpage
 \addcontentsline{toc}{section}{Anexos} 
@@ -534,7 +522,7 @@ Criterio &  Bueno ( 10\% ) & Regular (7\% ) & Menor a lo esperado (5\%) \\ \hlin
 \end{center}
 
 \begin{center}
-\textbf{Técnico Superior Universitario}
+\textbf{Estadía Profesional}
 \end{center}
 
 \vspace{0.5cm}
