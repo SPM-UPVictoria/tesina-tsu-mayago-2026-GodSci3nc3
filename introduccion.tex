@@ -1,112 +1,104 @@
 \section{Introducción}
 \label{ch:introduccion}
 
-La introducción es la primera sección sustantiva de la tesis y tiene como propósito principal guiar al lector a través del contexto y la relevancia del estudio. En ella, se presenta el problema de investigación, se establecen los objetivos, se justifica la realización del trabajo y se delinean los alcances y limitaciones. Debe ser escrita de forma clara y concisa, capturando el interés del lector y proporcionando una visión general de lo que se abordará en los capítulos subsiguientes.
+El proyecto \textit{Semáforo de Insumos IMSS} se enfoca en el control, gestión y optimización del flujo de medicamentos e insumos dentro de unidades médicas del Instituto Mexicano del Seguro Social. El problema central no es la falta de información, sino su dispersión, el retraso con el que llega y la dificultad para convertirla en decisiones operativas claras. En la práctica se siguen procesos manuales, reportes tardíos y ajustes reactivos que terminan en desabasto, exceso de inventario o pérdida de trazabilidad.
 
-\subsection{Antecedentes}
-\label{sec:antecedentes}
+Este documento corresponde al primer avance formal de la tesina. La investigación se encuentra en fase de campo y desarrollo, por lo que el contenido se concentra en el contexto, el problema, los objetivos, los antecedentes y el marco teórico tentativo. No se presentan resultados ni conclusiones porque todavía están en construcción.
 
-En esta sección, se presenta una revisión concisa y pertinente de investigaciones previas, literatura existente y el estado del arte relacionado con el tema de la tesis. El objetivo es situar el trabajo actual dentro del conocimiento acumulado, identificar vacíos en la investigación y demostrar la originalidad y la necesidad del estudio propuesto. Se deben citar adecuadamente las fuentes, mostrando cómo el trabajo se construye sobre cimientos previos o cómo aborda aspectos no resueltos.
-
-\subsection{Definición del Problema}
-\label{sec:problema}
-
-Aquí se describe de manera clara y precisa el problema que la tesis busca resolver. Es fundamental articular el problema de forma que sea comprensible, relevante y factible de investigar. Esta sección debe responder a preguntas como: ¿Qué situación actual es insatisfactoria o genera una necesidad? ¿Qué aspectos de este problema no han sido abordados adecuadamente por investigaciones anteriores? La definición del problema puede ser formulada como una pregunta de investigación o una declaración clara de la brecha de conocimiento.
-
-\subsection{Objetivos}
+\section{Objetivo general y específicos}
 \label{sec:objetivos}
 
-Los objetivos son las metas que se esperan alcanzar con la realización de la investigación. Deben ser claros, medibles, alcanzables, relevantes y con un tiempo definido (SMART, por sus siglas en inglés). Se dividen en un objetivo general y varios objetivos específicos.
-
-\subsubsection{Objetivo General}
+\subsection{Objetivo general}
 \label{subsec:objetivo_general}
 
-El objetivo general expresa el propósito fundamental del estudio en términos amplios. Es la meta principal que se busca lograr y generalmente abarca la totalidad de la investigación. Debe ser coherente con la definición del problema.
-\begin{itemize}
-    \item \textbf{Ejemplo:} Desarrollar un sistema automatizado para la detección temprana de fallas en turbinas eólicas utilizando técnicas de aprendizaje automático.
-\end{itemize}
+Diseñar e implementar un sistema de semaforización analítica para el control de insumos y medicamentos en unidades médicas del IMSS, capaz de capturar datos en tiempo real y transformar esa información en alertas visuales para identificar desabastos, excesos y cuellos de botella.
 
-\subsubsection{Objetivos Específicos}
+\subsection{Objetivos específicos}
 \label{subsec:objetivos_especificos}
 
-Los objetivos específicos detallan los pasos o las acciones concretas que se llevarán a cabo para alcanzar el objetivo general. Son tareas más pequeñas y desglosadas que, al ser cumplidas, permiten la consecución del objetivo principal.
-\begin{itemize}
-    \item \textbf{Ejemplo 1:} Recopilar y preprocesar un conjunto de datos de vibraciones y parámetros operativos de turbinas eólicas.
-    \item \textbf{Ejemplo 2:} Implementar y evaluar diferentes algoritmos de aprendizaje automático para la clasificación de estados operativos (normal, pre-falla, falla).
-    \item \textbf{Ejemplo 3:} Diseñar una interfaz de usuario para la visualización de alertas y el monitoreo en tiempo real del estado de las turbinas.
-\end{itemize}
+\begin{enumerate}
+    \item Realizar el levantamiento de requerimientos en campo, considerando procesos reales de registro, surtido y consumo.
+    \item Estructurar la base de datos que soporte el registro de entradas, salidas, niveles de stock y puntos críticos.
+    \item Definir la lógica del algoritmo de semaforización, incluyendo reglas de negocio y umbrales por tipo de insumo.
+    \item Diseñar una interfaz de usuario clara y operativa que permita visualizar el semáforo y facilitar la toma de decisiones.
+\end{enumerate}
 
-\subsection{Justificación}
-\label{sec:justificacion}
+\section{Planteamiento del problema}
+\label{sec:problema}
 
-La justificación explica por qué es importante y relevante llevar a cabo la investigación. Se deben argumentar los beneficios y la utilidad del estudio desde diferentes perspectivas: teórica, práctica, social, económica, tecnológica, etc. Responde a la pregunta: ¿Por qué vale la pena invertir tiempo y recursos en esta investigación? Aquí se resaltan los aportes que la tesis generará al campo del conocimiento o a la solución de problemas específicos.
+En las unidades médicas del IMSS se manejan grandes volúmenes de insumos con criticidad distinta. Sin embargo, el control del inventario sigue apoyándose en capturas manuales, reportes no estandarizados y validaciones tardías. Esta dinámica provoca que la información sobre el stock no sea confiable ni oportuna, lo que complica la planeación de compras, el surtido interno y la atención diaria a los pacientes.
 
-\subsection{Alcances y Limitaciones}
-\label{sec:alcances_limitaciones}
+El problema no es únicamente logístico; es analítico. Se requiere un mecanismo sencillo para convertir datos dispersos en señales claras: qué insumos están en riesgo, cuáles tienen exceso y cuáles están en un rango saludable. Sin esa lectura rápida y sistemática, las decisiones se toman tarde y con poca evidencia.
 
-\subsubsection{Alcances}
-\label{subsec:alcances}
+\section{Antecedentes}
+\label{sec:antecedentes}
 
-Los alcances definen claramente hasta dónde llegará el estudio, qué aspectos cubrirá y cuáles serán sus fronteras. Establecen qué elementos, variables, poblaciones o contextos serán incluidos en la investigación. Es esencial para evitar expectativas irrealistas y para mantener el enfoque del trabajo.
+\subsection{Antecedentes de la empresa}
+\label{subsec:antecedentes_empresa}
 
-\subsubsection{Limitaciones}
-\label{subsec:limitaciones}
+El Instituto Mexicano del Seguro Social es una de las instituciones de salud pública más grandes del país y opera una red amplia de hospitales y unidades médicas. Su operación exige disponibilidad continua de medicamentos, material de curación y consumibles clínicos. La gestión de inventarios en este contexto no solo impacta costos, también afecta de manera directa la calidad del servicio y la seguridad del paciente. Por ello, la eficiencia en el control de insumos es una prioridad operativa constante.
 
-Las limitaciones son los factores externos o internos que podrían restringir la validez, generalización o profundidad de los resultados de la investigación. Es importante identificarlas honestamente, ya que demuestran un pensamiento crítico por parte del investigador. Pueden incluir restricciones de tiempo, recursos, acceso a datos, metodológicas, etc.
+\subsection{Antecedentes teóricos}
+\label{subsec:antecedentes_teoricos}
 
-\subsection{Ejemplos de Tablas e Inclusión de Imágenes}
-\label{sec:ejemplos_elementos}
+En la literatura y en la práctica hospitalaria se utilizan distintos enfoques para controlar inventarios: métodos de máximos y mínimos, puntos de reorden, clasificaciones ABC, reposición Just in Time y esquemas de inventario administrado por el proveedor (VMI). Estos modelos buscan equilibrio entre disponibilidad y costo, pero suelen depender de datos confiables y de un monitoreo continuo. En el sector salud, la variabilidad en la demanda y la criticidad de algunos insumos hacen que la simple regla de reorden no sea suficiente. En ese punto, un sistema de semaforización aporta una capa analítica que traduce datos en decisiones rápidas y visibles.
 
-Para ilustrar el uso de elementos visuales en su tesis, a continuación se presentan ejemplos básicos de cómo incluir tablas e imágenes en LaTeX.
+\subsubsection{Tabla comparativa}
+\label{subsubsec:tabla_comparativa}
 
-\subsubsection{Inclusión de Tablas}
-
-Las tablas son herramientas fundamentales para presentar datos de manera organizada y comprensible.
-\begin{table}[H]
+\begin{table}[!tbh]
     \centering
-    \caption{Clasificación de Sensores Comunes en Ingeniería.}
-    \label{tab:sensores_comunes}
-    \begin{tabular}{|l|c|c|}
+    \caption{Comparativa de enfoques de control de inventarios médicos.}
+    \label{tab:comparativa_inventarios}
+    \begin{tabular}{|L{3.0cm}|L{4.0cm}|L{4.0cm}|L{4.0cm}|}
         \hline
-        \textbf{Tipo de Sensor} & \textbf{Magnitud Medida} & \textbf{Principio de Funcionamiento} \\
+        \textbf{Sistema o metodología} & \textbf{Pros} & \textbf{Contras} & \textbf{Valor analítico de la propuesta} \\
         \hline
-        Termopar & Temperatura & Efecto Seebeck \\
-        Extensómetro & Deformación & Resistencia eléctrica \\
-        Acelerómetro & Aceleración & Efecto piezoeléctrico \\
-        Encoder rotatorio & Posición angular & Óptico/Magnético \\
+        Máximos--mínimos con punto de reorden & Fácil de implementar y auditar; estandariza el reabastecimiento. & No considera criticidad clínica ni variaciones diarias; depende de capturas puntuales. & El semáforo agrega prioridad por criticidad y señales tempranas ante tendencia de desabasto. \\
+        \hline
+        Just in Time / Kanban & Reduce sobreinventario y promueve flujo continuo. & Alta dependencia de proveedores; riesgo ante picos de demanda o contingencias. & La semaforización permite anticipar riesgos sin romper el flujo, con alertas operativas visibles. \\
+        \hline
+        VMI / consignación & Traslada parte de la gestión al proveedor; reduce carga administrativa interna. & Requiere datos confiables y acuerdos contractuales; menor control interno. & El sistema aporta trazabilidad interna y evidencia para negociar niveles y tiempos de reposición. \\
         \hline
     \end{tabular}
-    \caption*{Nota: Esta tabla es un ejemplo para demostrar la estructura básica de una tabla en LaTeX.}
 \end{table}
-Como se puede observar en la Tabla \ref{tab:sensores_comunes}, la información se presenta de forma clara y estructurada. Es importante añadir un \verb|`\caption`|  para describir la tabla y un  \verb|`\label`|  para referenciarla en el texto.
 
-\subsubsection{Inclusión de Imágenes}
+\section{Justificación}
+\label{sec:justificacion}
 
-Las imágenes, gráficos o diagramas son cruciales para complementar la explicación textual y facilitar la comprensión de conceptos complejos o resultados visuales.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{img/diagrama_proceso}
-    \caption{Diagrama de un proceso de control automático.}
-    \label{fig:diagrama_control}
-\end{figure}
-% La Figura \ref{fig:diagrama_control} ilustra un ejemplo de un diagrama de un proceso de control. Para incluir una imagen, se utiliza el entorno `figure` y el comando `\includegraphics`. Es fundamental especificar la ruta de la imagen (en este caso, `images/diagrama_proceso.png`) y un `width` para controlar su tamaño. Al igual que con las tablas, un `\caption` y un `\label` son indispensables. Es crucial que cada imagen tenga una calidad adecuada y que sea relevante para el texto.
+Un sistema de semaforización analítica no pretende reemplazar los procesos existentes, sino hacerlos visibles y accionables. Al transformar datos de inventario en alertas claras, se reduce el tiempo de reacción ante desabastos, se evita el sobreabasto y se facilita la priorización de compras. Esto tiene impacto directo en la continuidad del servicio y en el uso responsable de recursos públicos.
 
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{img/grafico_datos1}
-        \caption{Datos de Temperatura.}
-        \label{fig:subfig_temp}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{img/grafico_datos2}
-        \caption{Datos de Presión.}
-        \label{fig:subfig_pres}
-    \end{subfigure}
-    \caption{Comparación de datos operativos de un sistema (Temperatura vs. Presión).}
-    \label{fig:comparacion_datos}
-\end{figure}
-Incluso es posible combinar varias imágenes en una sola figura, como se muestra en la Figura \ref{fig:comparacion_datos}, utilizando el paquete `subcaption`.
+Desde la perspectiva académica y profesional, el proyecto integra análisis de datos, diseño de bases de datos e interfaces centradas en la operación real. La propuesta es viable porque se apoya en datos que ya se generan en campo, pero que hoy no se explotan de manera sistemática.
 
-Asegúrense de que todas las figuras y tablas estén debidamente referenciadas en el texto y que su contenido sea autoexplicativo, utilizando los pies de figura y títulos de tabla de manera efectiva.
+\section{Alcances y limitaciones}
+\label{sec:alcances_limitaciones}
+
+\subsection{Alcances}
+\label{subsec:alcances}
+
+\begin{itemize}
+    \item Definir el modelo de datos para registrar entradas, salidas, niveles de stock y umbrales operativos.
+    \item Construir la lógica de semaforización para clasificar los insumos en verde, amarillo o rojo según su nivel y criticidad.
+    \item Diseñar una interfaz de usuario funcional para la visualización del estado del inventario.
+    \item Documentar el flujo de información desde la captura en campo hasta la visualización en el semáforo.
+\end{itemize}
+
+\subsection{Limitaciones}
+\label{subsec:limitaciones}
+
+\begin{itemize}
+    \item El alcance inicial se enfoca en una unidad médica y en un subconjunto de insumos críticos, sujeto a disponibilidad de información.
+    \item No se contempla, por ahora, la integración directa con sistemas institucionales externos ni con proveedores.
+    \item La calidad de las alertas dependerá de la consistencia de los registros en campo.
+    \item No se incluyen resultados ni mediciones de impacto, ya que el proyecto está en fase de desarrollo.
+\end{itemize}
+
+\section{Marco teórico tentativo}
+\label{sec:marco_teorico_tentativo}
+
+\begin{itemize}
+    \item \textbf{Sistemas de gestión de inventarios en salud.} Conceptos de stock de seguridad, punto de reorden, clasificación ABC/XYZ, VMI y Just in Time aplicados a entornos clínicos.
+    \item \textbf{Arquitectura de software para gestión de datos.} Modelado de bases de datos, integridad y normalización, flujo de datos transaccional y estructuras para trazabilidad.
+    \item \textbf{Metodologías de desarrollo ágil.} Enfoques Scrum/Kanban para iteración rápida, validación con usuarios y priorización de requerimientos.
+    \item \textbf{Herramientas de visualización de datos.} Tableros operativos, indicadores clave, semaforización y criterios de usabilidad para decisiones en tiempo real.
+\end{itemize}
